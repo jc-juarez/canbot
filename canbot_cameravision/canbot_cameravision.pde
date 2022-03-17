@@ -220,14 +220,6 @@ void draw() {
     line(avgXBlue, avgYBlue,rightGrabPointXBlue, rightGrabPointYBlue);
   }
   
-  if(redDetected == 1 && blueDetected == 1){
-    //println(logTracker," -> Red Object: [ minX : ", minXRed, " | maxX : ", maxXRed, " | minY : ", minYRed, " | maxY : ", maxYRed, " ] // Blue Object: [ minX : ", minXBlue, " | maxX : ", maxXBlue, " | minY : ", minYBlue, " | maxY : ", maxYBlue, " ]");
-  } else if(redDetected == 1){
-    //println(logTracker," -> Red Object: [ minX : ", minXRed, " | maxX : ", maxXRed, " | minY : ", minYRed, " | maxY : ", maxYRed, " ]");
-  } else if(blueDetected == 1){
-    //println(logTracker," -> Blue Object: [ minX : ", minXBlue, " | maxX : ", maxXBlue, " | minY : ", minYBlue, " | maxY : ", maxYBlue, " ]");
-  }
-  
   // Setting Data Transfer
   
   data[0] = str(logTracker);
@@ -261,7 +253,6 @@ void draw() {
   
   if(redDetected == 1 || blueDetected == 1) logTracker++;
     
-  
 }
 
 float distSq(float x1, float y1, float z1, float x2, float y2, float z2) {

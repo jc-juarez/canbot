@@ -76,12 +76,13 @@ void setup() {
 void draw() {
   p = loadStrings("../fifo.txt");
   if(p.length > 0) setParams();
-  if(redDetected == 1 && blueDetected == 1){
-    println(logTracker," -> Red Object: [ minX : ", minXRed, " | maxX : ", maxXRed, " | minY : ", minYRed, " | maxY : ", maxYRed, " ] // Blue Object: [ minX : ", minXBlue, " | maxX : ", maxXBlue, " | minY : ", minYBlue, " | maxY : ", maxYBlue, " ]");
-  } else if(redDetected == 1){
-    println(logTracker," -> Red Object: [ minX : ", minXRed, " | maxX : ", maxXRed, " | minY : ", minYRed, " | maxY : ", maxYRed, " ]");
-  } else if(blueDetected == 1){
-    println(logTracker," -> Blue Object: [ minX : ", minXBlue, " | maxX : ", maxXBlue, " | minY : ", minYBlue, " | maxY : ", maxYBlue, " ]");
+ if(redDetected == 1){
+    println(logTracker," -> Red Object => Center At ( x , y ) : ( ", avgXRed, " , ", avgYRed," ) // Positions : [ minX : ", minXRed, " | maxX : ", maxXRed, " | minY : ", minYRed, " | maxY : ", maxYRed, " ] // Grab At : [ Left (x,y) : (",leftGrabPointXRed,
+    ",",leftGrabPointYRed,") // Right (x,y) : (",rightGrabPointXRed,",",rightGrabPointYRed,") ]");
+  }
+  if(blueDetected == 1){
+    println(logTracker," -> Blue Object => Center At ( x , y ) : ( ", avgXBlue, " , ", avgYBlue," ) // Positions : [ minX : ", minXBlue, " | maxX : ", maxXBlue, " | minY : ", minYBlue, " | maxY : ", maxYBlue, " ] // Grab At : [ Left (x,y) : (",leftGrabPointXBlue,
+    ",",leftGrabPointYBlue,") // Right (x,y) : (",rightGrabPointXBlue,",",rightGrabPointYBlue,") ]");
   }
 }
 
