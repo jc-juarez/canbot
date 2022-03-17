@@ -12,7 +12,7 @@ import processing.video.*;
 
 Capture video;
 
-String[] data = new String[15];
+String[] data = new String[23];
 
 color redColor; 
 color blueColor;
@@ -246,6 +246,16 @@ void draw() {
   data[12] = str(maxYBlue);
   data[13] = str(avgXBlue);
   data[14] = str(avgYBlue);
+  
+  data[15] = str(leftGrabPointXRed);
+  data[16] = str(leftGrabPointYRed);
+  data[17] = str(rightGrabPointXRed);
+  data[18] = str(rightGrabPointYRed);
+  
+  data[19] = str(leftGrabPointXBlue);
+  data[20] = str(leftGrabPointYBlue);
+  data[21] = str(rightGrabPointXBlue);
+  data[22] = str(rightGrabPointYBlue);
   
   saveStrings("../fifo.txt", data);
   
